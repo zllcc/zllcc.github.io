@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>我是一个播放模拟器 | ZhangLaiLei&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="我喜欢站在未完工的两广路上喊你的名字">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我是一个播放模拟器">
+<meta property="og:url" content="http://yoursite.com/2016/06/06/我是一个播放模拟器/index.html">
+<meta property="og:site_name" content="ZhangLaiLei's blog">
+<meta property="og:description" content="我喜欢站在未完工的两广路上喊你的名字">
+<meta property="og:updated_time" content="2016-06-05T16:26:23.002Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我是一个播放模拟器">
+<meta name="twitter:description" content="我喜欢站在未完工的两广路上喊你的名字">
+  
+    <link rel="alternative" href="/atom.xml" title="ZhangLaiLei&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZhangLaiLei&#39;s blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">warmth and hope.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-我是一个播放模拟器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/06/我是一个播放模拟器/" class="article-date">
+  <time datetime="2016-06-05T16:24:05.000Z" itemprop="datePublished">2016-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      我是一个播放模拟器
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我喜欢站在未完工的两广路上喊你的名字<br><a id="more"></a></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+&lt;style&gt;
+    /*全局样式*/
+    body,div,ul,li {
+        margin: 0px;
+        padding: 0px;
+    }
+    ul {
+        list-style: none;
+    }
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+    .player .timing{
+        padding-left: 12px;
+    }
+    .chat-content{
+        margin-top: 60px;
+        height: 100px;
+        width: 500px;
+        background: #ddd;
+        overflow: auto;
+        padding: 8px;
+    }
+    .chat-content .records{
+        height: 30px;
+        line-height: 30px;
+    }
+    .active{
+        color: #fff;
+    }
+    .match-area{
+        margin-top: 40px;
+    }
+    .match-area .words{
+        width: 100px;
+        height: 32px;
+        border: 1px solid #000fff;
+        margin: 10px;
+        line-height: 32px;
+        text-align: center;
+    }
+&lt;/style&gt;
+&lt;title&gt;player是一个播放器&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        &lt;div class=&quot;player&quot;&gt;player是一个播放器&lt;span class=&quot;timing&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;chat-content&quot;&gt;
+            &lt;ul&gt;
+                &lt;li class=&quot;records&quot;&gt;我喜欢站在未完工的两广路上喊你的名字&lt;/li&gt;
+                &lt;li class=&quot;records&quot; id=&quot;nice&quot; data-words=&quot;美好&quot;&gt;今天是美好的一天。&lt;/li&gt;
+                &lt;li class=&quot;records&quot; id=&quot;happy&quot; data-words=&quot;快乐&quot;&gt;希望你每天都快乐。&lt;/li&gt;
+                &lt;li class=&quot;records&quot; id=&quot;happiness&quot; data-words=&quot;幸福&quot;&gt;幸福一辈子。&lt;/li&gt;
+                &lt;li class=&quot;records&quot;&gt;天天看电视，能美好才怪。&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;match-area&quot;&gt;
+            &lt;div class=&quot;words&quot; data-key=&quot;nice&quot;&gt;美好&lt;/div&gt;
+            &lt;div class=&quot;words&quot; data-key=&quot;happy&quot;&gt;快乐&lt;/div&gt;
+            &lt;div class=&quot;words&quot; data-key=&quot;happiness&quot;&gt;幸福&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;jquery-1.7.2.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    $(document).ready(function(){
+        var palyer = {
+            init: function(){
+                this.sum = 0;
+                this.records = $(&apos;.records&apos;);
+                this.n = $(&apos;.records&apos;).length;
+                this.words = $(&apos;.words&apos;);
+                this.matchEvent();
+                this.playerInit();
+                this.trunRed();
+            },
+            trunRed: function(){
+                for(var i = 0;i &lt; this.n; i ++){
+                    var words = $(this.records[i]).attr(&apos;data-words&apos;);
+                    var text = $(this.records[i]);
+                    if(words){
+                        text.html(this.eachColor(text,words));
+                    }
+                }
+            },
+            eachColor: function(p,t){
+                var nt = &apos;&lt;span style=&quot;color:red&quot;&gt;&apos;+t+&quot;&lt;/span&gt;&quot;;
+                var reg = RegExp(t,&quot;g&quot;);
+                return  p.text().replace(reg,nt);
+            },
+            playerInit: function(){
+                var that = this;
+                that.timer = setInterval(function(){
+                    $(&apos;.timing&apos;).text(that.sum);
+                    that.sum ++;
+                   if(that.sum === 31){
+                       clearInterval(that.timer);
+                   }
+                    that.recordsMatch(that.sum);
+                },1000);
+            },
+            recordsMatch: function(sum){
+                for(var i = 0;i &lt; this.n; i ++){
+                    this.records.removeClass(&apos;active&apos;);
+                    if(0 &lt;= sum &amp;&amp; sum &lt;= 5){
+                        $(this.records[0]).addClass(&apos;active&apos;);
+                    }
+                    if(5 &lt; sum &amp;&amp; sum &lt;= 10){
+                        $(this.records[1]).addClass(&apos;active&apos;);
+                    }
+                    if(10 &lt; sum &amp;&amp; sum &lt;= 15){
+                        $(this.records[2]).addClass(&apos;active&apos;);
+                    }
+                    if(15 &lt; sum &amp;&amp; sum &lt;= 20){
+                        $(this.records[3]).addClass(&apos;active&apos;);
+                    }
+                    if(20 &lt; sum &amp;&amp; sum &lt;= 30){
+                        $(this.records[4]).addClass(&apos;active&apos;);
+                    }
+                }
+            },
+            jumpTo: function(keys){
+                for(var i = 0;i &lt; this.n; i ++){
+                    var id = $(this.records[i]).attr(&apos;id&apos;);
+                    this.records.removeClass(&apos;active&apos;);
+                    if(id === keys){
+                        $(this.records[i]).addClass(&apos;active&apos;);
+                        return;
+                    }
+                }
+            },
+            matchEvent: function(){
+                var that = this;
+                this.words.each(function(e){
+                    $(this).on(&apos;click&apos;,function(){
+                        var keys = $(this).attr(&apos;data-key&apos;);
+                        that.jumpTo(keys);
+                    })
+                })
+
+            }
+        }
+        palyer.init();
+    })
+&lt;/script&gt;
+&lt;/html&gt;
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/06/我是一个播放模拟器/" data-id="cip2sx04z0005hwpjf6tue1oy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/技术/" style="font-size: 10px;">技术</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/06/06/我是一个播放模拟器/">我是一个播放模拟器</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/11/h5-css3fangun/">h5+css3水平和垂直翻滚</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/10/upDown/">表格操作列上移和下移整行</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/10/js水平垂直翻滚/">js水平垂直翻滚</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 zhanglailei<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
