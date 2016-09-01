@@ -15,23 +15,7 @@
 <meta property="og:description" content="1.图片闪动
 2.图片变大变透明，随机
 3.按y轴旋转360度">
-<meta property="og:image" content="http://yoursite.com/image/1.jpg">
-<meta property="og:image" content="http://yoursite.com/image/2.jpg">
-<meta property="og:image" content="http://yoursite.com/image/3.jpg">
-<meta property="og:image" content="http://yoursite.com/image/4.jpg">
-<meta property="og:image" content="http://yoursite.com/image/5.jpg">
-<meta property="og:image" content="http://yoursite.com/image/6.jpg">
-<meta property="og:image" content="http://yoursite.com/image/7.jpg">
-<meta property="og:image" content="http://yoursite.com/image/8.jpg">
-<meta property="og:image" content="http://yoursite.com/image/9.jpg">
-<meta property="og:image" content="http://yoursite.com/image/10.jpg">
-<meta property="og:image" content="http://yoursite.com/image/11.jpg">
-<meta property="og:image" content="http://yoursite.com/image/12.jpg">
-<meta property="og:image" content="http://yoursite.com/image/13.jpg">
-<meta property="og:image" content="http://yoursite.com/image/14.jpg">
-<meta property="og:image" content="http://yoursite.com/image/15.jpg">
-<meta property="og:image" content="http://yoursite.com/image/16.jpg">
-<meta property="og:updated_time" content="2016-09-01T23:21:52.398Z">
+<meta property="og:updated_time" content="2016-09-01T23:28:31.423Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图片群旋转">
 <meta name="twitter:description" content="1.图片闪动
@@ -111,20 +95,126 @@
         <ul>
 <li>1.图片闪动</li>
 <li>2.图片变大变透明，随机</li>
-<li><p>3.按y轴旋转360度</p>
-<a id="more"></a>
-<p>  &lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;" target="_blank" rel="external">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</a></p>
-  <html xmlns="http://www.w3.org/1999/xhtml"><br>  <head><br>  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><br>  <script type="text/javascript" src="jquery-1.7.2.js"></script><br>  <style type="text/css"><br>      .container{<br>          width: 320px;<br>          height: 320px;<br>          margin: 100px auto;<br>          perspective: 800px;<br>      }<br>      .container img{<br>          width: 80px;<br>          height: 80px;<br>          float: left;<br>      }<br>      .btn{<br>          text-align: center;<br>      }<br>  </style><br>  <title>transition demo</title><br>  </head><br><br>  <body><br><br>      <div class="container"><br>          <img src="image/1.jpg"><br>          <img src="image/2.jpg"><br>          <img src="image/3.jpg"><br>          <img src="image/4.jpg"><br>          <img src="image/5.jpg"><br>          <img src="image/6.jpg"><br>          <img src="image/7.jpg"><br>          <img src="image/8.jpg"><br>          <img src="image/9.jpg"><br>          <img src="image/10.jpg"><br>          <img src="image/11.jpg"><br>          <img src="image/12.jpg"><br>          <img src="image/13.jpg"><br>          <img src="image/14.jpg"><br>          <img src="image/15.jpg"><br>          <img src="image/16.jpg"><br>      </div><br>      <div class="btn"><button id="run">Run</button></div><br>  </body><br>  <script><br>      window.onload = function(){<br>          var btn = document.getElementById(‘run’);<br>          var imgs = document.querySelectorAll(‘img’);<br>          var on = true;//true代表可以点，false代表不可点<br>          btn.onclick = function(){<br>              if(!on){<br>                  return;<br>              }<br>              on = false;<br>              var endNum = 0;<br>              var allEnd = 0;<br>              for(var i = 0;i &lt; imgs.length;i ++){<br>                  (function(i){<br>                      setTimeout(function(){<br>                          motion(imgs[i],’100ms’,function(){<br>                              this.style.transform = ‘scale(0)’;<br>                          },function(){<br>                              motion(this,’1s’,function(){<br>                                  this.style.transform = ‘scale(1)’;<br>                                  this.style.opacity = 0;<br>                                  endNum ++;<br>                                  if(endNum === imgs.length){<br>                                      toBig();<br>                                  }<br>                              });<br>                          })<br>                      },Math.random()<em>1000);<br>                  })(i);<br>              }<br>              function toBig(){<br>                  for(var i = 0; i &lt; imgs.length; i ++){<br>                      imgs[i].style.transition = ‘’;<br>                      //想要一个物体有css3中的效果，要给他设置初始值<br>                      imgs[i].style.transform = ‘rotateY(0deg) translateZ(-‘+Math.random()</em>500+’px)’;<br><br>                      (function(i){<br>                          setTimeout(function(){<br>                              motion(imgs[i],’2s’,function(){<br>                                  this.style.opacity = 1;<br>                                  this.style. transform = ‘rotateY(-360deg) translateZ(0)’;<br>                              },function(){<br>                                  allEnd ++;<br>                                  if(allEnd === imgs.length){<br>                                      on = true;//所有运动完了之后可以点<br>                                  }<br>                              })<br>                          },Math.random()*1000)<br>                      })(i)<br>                  }<br>              }<br>          };<br>          function motion(obj,timer,doFn,cb){<br>              obj.style.transition = timer;<br>              doFn.call(obj);<br>              var called = false;<br>              obj.addEventListener(‘transitionend’,function(){<br>                  if(!called){<br>                      cb &amp;&amp; cb.call(obj);<br>                      called = true;<br>                  }<br>              },false); //false:事件冒泡与捕获<br>          }<br>      };<br>  </script><br>  </html>
-
-
-
-</li>
+<li>3.按y轴旋转360度</li>
 </ul>
+<a id="more"></a>
+<pre><code>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;jquery-1.7.2.js&quot;&gt;&lt;/script&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    .container{
+        width: 320px;
+        height: 320px;
+        margin: 100px auto;
+        perspective: 800px;
+    }
+    .container img{
+        width: 80px;
+        height: 80px;
+        float: left;
+    }
+    .btn{
+        text-align: center;
+    }
+&lt;/style&gt;
+&lt;title&gt;transition demo&lt;/title&gt;
+&lt;/head&gt;
 
+&lt;body&gt;
+
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;img src=&quot;image/1.jpg&quot; /&gt;
+        &lt;img src=&quot;image/2.jpg&quot; /&gt;
+        &lt;img src=&quot;image/3.jpg&quot; /&gt;
+        &lt;img src=&quot;image/4.jpg&quot; /&gt;
+        &lt;img src=&quot;image/5.jpg&quot; /&gt;
+        &lt;img src=&quot;image/6.jpg&quot; /&gt;
+        &lt;img src=&quot;image/7.jpg&quot; /&gt;
+        &lt;img src=&quot;image/8.jpg&quot; /&gt;
+        &lt;img src=&quot;image/9.jpg&quot; /&gt;
+        &lt;img src=&quot;image/10.jpg&quot; /&gt;
+        &lt;img src=&quot;image/11.jpg&quot; /&gt;
+        &lt;img src=&quot;image/12.jpg&quot; /&gt;
+        &lt;img src=&quot;image/13.jpg&quot; /&gt;
+        &lt;img src=&quot;image/14.jpg&quot; /&gt;
+        &lt;img src=&quot;image/15.jpg&quot; /&gt;
+        &lt;img src=&quot;image/16.jpg&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;btn&quot;&gt;&lt;button id=&quot;run&quot;&gt;Run&lt;/button&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;script&gt;
+    window.onload = function(){
+        var btn = document.getElementById(&apos;run&apos;);
+        var imgs = document.querySelectorAll(&apos;img&apos;);
+        var on = true;//true代表可以点，false代表不可点
+        btn.onclick = function(){
+            if(!on){
+                return;
+            }
+            on = false;
+            var endNum = 0;
+            var allEnd = 0;
+            for(var i = 0;i &lt; imgs.length;i ++){
+                (function(i){
+                    setTimeout(function(){
+                        motion(imgs[i],&apos;100ms&apos;,function(){
+                            this.style.transform = &apos;scale(0)&apos;;
+                        },function(){
+                            motion(this,&apos;1s&apos;,function(){
+                                this.style.transform = &apos;scale(1)&apos;;
+                                this.style.opacity = 0;
+                                endNum ++;
+                                if(endNum === imgs.length){
+                                    toBig();
+                                }
+                            });
+                        })
+                    },Math.random()*1000);
+                })(i);
+            }
+            function toBig(){
+                for(var i = 0; i &lt; imgs.length; i ++){
+                    imgs[i].style.transition = &apos;&apos;;
+                    //想要一个物体有css3中的效果，要给他设置初始值
+                    imgs[i].style.transform = &apos;rotateY(0deg) translateZ(-&apos;+Math.random()*500+&apos;px)&apos;;
+
+                    (function(i){
+                        setTimeout(function(){
+                            motion(imgs[i],&apos;2s&apos;,function(){
+                                this.style.opacity = 1;
+                                this.style. transform = &apos;rotateY(-360deg) translateZ(0)&apos;;
+                            },function(){
+                                allEnd ++;
+                                if(allEnd === imgs.length){
+                                    on = true;//所有运动完了之后可以点
+                                }
+                            })
+                        },Math.random()*1000)
+                    })(i)
+                }
+            }
+        };
+        function motion(obj,timer,doFn,cb){
+            obj.style.transition = timer;
+            doFn.call(obj);
+            var called = false;
+            obj.addEventListener(&apos;transitionend&apos;,function(){
+                if(!called){
+                    cb &amp;&amp; cb.call(obj);
+                    called = true;
+                }
+            },false); //false:事件冒泡与捕获
+        }
+    };
+&lt;/script&gt;
+&lt;/html&gt;
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/02/transitionDemo/" data-id="ciskyi7p70007n0pjhca13y7t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/02/transitionDemo/" data-id="ciskyqfc60007f8pjpk4zwyjc" class="article-share-link">Share</a>
       
       
     </footer>
